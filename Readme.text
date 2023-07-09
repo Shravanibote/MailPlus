@@ -1,0 +1,41 @@
+-----------------Mail Plus---------------------------
+
+-> Project Description
+The Mail Plus project is a bulk email dispatching system designed to send emails in bulk to a large number of recipients.
+The system has been developed using HTML, CSS, and JavaScript, and it uses the EmailJS API to send emails, making the system efficient and reliable.
+The project can also sort and validate email addresses from CSV files, ensuring that only valid email addresses are used.
+
+
+*******------------| Usage Instructions |----------------********
+
+--->>> To use the Mass Mail Dispatcher project, follow these steps:
+
+ 1. Upload a CSV file containing email addresses.
+ 2. The system will validate and sort the email addresses, separating the valid and invalid ones.
+ 3. Enter the email subject, body, and other details.
+ 4. Click on the send button to dispatch the emails.
+
+
+---------------------------------------------------------------------------------------------
+-->> Technology Stack
+-> The Mass Mail Dispatcher project uses the following technologies:
+
+ • HTML
+ • CSS
+ • JavaScript
+ • EmailJS API
+
+---------------------------------------------------------------------------------------------
+
+-> Examples-
+------------> Here are some examples of how the Mass Mail Dispatcher project can be used:
+
+ ➤ Sending newsletters to a list of subscribers.
+ ➤ Sending event invitations to a list of attendees.
+ ➤ Sending product updates to a list of customers.
+
+---------------------------------------------------------------------------------------------
+Project By - " Shravani Bote "
+==============================================================================================
+
+______________________THANK_YOU !!!!_____________________________________________________________

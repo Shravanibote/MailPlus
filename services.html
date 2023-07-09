@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>send mail</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  </head>
+  <body class="service">
+    <!-- navbar -->
+<section id="navbar">
+<nav class="nm navbar navbar-expand-lg bg-body-tertiary row display-7">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-4 display-6" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-envelope-plus" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
+      <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z"/>
+      </svg>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="services.html"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Email Campaigns
+            </a></a>
+            <li><a class="dropdown-item" href="signin.html">Free Trial</a></li>
+          </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</section>
+<!-- main code -->
+
+<p id="heading" class="text-white" style="top:100px;margin-left:50px">Mail Plus<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-envelope-plus" viewBox="0 0 16 16">
+<path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
+<path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z"/>
+</svg></p>
+<div class="container ow top " >
+
+  <div class="col-md-8 col-md-offset-2">
+
+    <form method="post" style = "position:absolute; left:800px; top:20px; margin-top:100px; margin-left:80px; width:600px ;background-color: #EEEEEE">
+      <label for="senderEmail">From :</label>
+      <input type="email" id="senderEmail" name="senderEmail" required>
+
+      <br><br><br>
+
+      <label for="subject" style="margin-top: -2em;z-index: 22;position: absolute;">Subject:</label>
+      <textarea id="subject" name="subject" required></textarea>
+
+      <br><br><br><br>
+
+      <label for="csvFile">CSV File:</label>
+      <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+
+      <br><br>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <br><br>
+
+      <input type="button" value="Send Emails" style="font-weight: bold;" onclick="sendEmails()">
+
+      <br>
+    </form>
+    <div style="display:flex; top:150px; width:800px;left:50px;" class="container validinvalid" >
+        <div>
+          <p style="color:white;font-weight:bold;font-size:2rem">Valid Emails: <span id="validEmailCount" ></span></p>
+          <div id="validEmails" style="float: left ;width:350px;height:320px"></div>
+        </div>
+        <div style="margin-left: 60px ">
+          <p style="color:white ;font-weight:bold;font-size:2rem">Invalid Emails: <span id="invalidEmailCount"></span></p>
+          <div id="invalidEmails" style="float: left; width:350px;height:320px"></div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- javascript -->
+
+<script type="text/javascript">
+  (function () {
+    emailjs.init("5EpzE1X9S3UEAOSn1"); // replace with your actual user ID
+  })();
+
+  function sendEmails() {
+    var senderEmail = document.getElementById("senderEmail").value;
+    var message = document.getElementById("message").value;
+    var subject = document.getElementById("subject").value;
+
+    var validEmails = [];
+    var invalidEmails = [];
+
+    // Read contents of CSV file
+    var file = document.getElementById("csvFile").files[0];
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function (event) {
+      var csv = event.target.result;
+      var lines = csv.split('\n');
+      for (var i = 0; i < lines.length; i++) {
+        var email = lines[i].trim();
+        var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/
+          ;
+        if (emailRegex.test(email)) {
+          validEmails.push(email);
+        } else {
+          invalidEmails.push(email);
+        }
+      }
+
+
+
+      // Send email to valid email addresses
+      for (var j = 0; j < validEmails.length; j++) {
+        var templateParams = {
+          to_name: validEmails[j],
+          from_name: senderEmail,
+          message_html: message,
+          subject_html: subject
+        };
+
+        // Replace you Service ID ↓ and  Template ID ↓ here.
+        emailjs.send('service_13s3n3a', 'template_huwrmzf', templateParams)
+          .then(function (response) {
+            console.log("SUCCESS", response);
+          }, function (error) {
+            console.log("FAILED", error);
+          });
+      }
+
+      alert("Emails sent to valid email addresses.");
+    };
+  }
+
+  /*Thinking*/
+  var TxtRotate = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 1) || 1000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+
+  TxtRotate.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+    var that = this;
+    var delta = 300 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  };
+
+  window.onload = function () {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i = 0; i < elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+    document.body.appendChild(css);
+  };
+</script>
+<script type="text/javascript">
+  document.getElementById("csvFile").addEventListener("change", function () {
+    var validEmails = [];
+    var invalidEmails = [];
+
+    // Read contents of CSV file
+    var file = document.getElementById("csvFile").files[0];
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function (event) {
+      var csv = event.target.result;
+      var lines = csv.split('\n');
+      for (var i = 0; i < lines.length; i++) {
+        var email = lines[i].trim();
+        var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/
+          ;
+        if (emailRegex.test(email)) {
+          validEmails.push(email);
+        } else {
+          invalidEmails.push(email);
+        }
+      }
+
+      // Display valid and invalid emails
+      document.getElementById("validEmails").innerHTML = validEmails.join("<br><br>");
+      document.getElementById("invalidEmails").innerHTML = invalidEmails.join("<br><br>");
+      document.getElementById("validEmailCount").innerText = "(" + validEmails.length + ")";
+      document.getElementById("invalidEmailCount").innerText = "(" + invalidEmails.length + ")";
+    };
+  });
+
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</body>
+</html>
